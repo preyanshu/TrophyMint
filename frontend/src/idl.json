@@ -1,0 +1,216 @@
+{
+  "address": "6HJ2RGDTB88UkzPBgCA8S7MBRjPeNeNsxNpxU1Qeow6t",
+  "metadata": {
+    "name": "anchor_example",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "create_asset",
+      "discriminator": [
+        28,
+        42,
+        120,
+        51,
+        7,
+        38,
+        156,
+        136
+      ],
+      "accounts": [
+        {
+          "name": "signer",
+          "signer": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "asset",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "mpl_core_program",
+          "address": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "database",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "follower_count",
+          "type": "i64"
+        },
+        {
+          "name": "dscvr_points",
+          "type": "i64"
+        },
+        {
+          "name": "streak_day_count",
+          "type": "i64"
+        },
+        {
+          "name": "user_id",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "initialize_database",
+      "discriminator": [
+        210,
+        169,
+        3,
+        198,
+        98,
+        238,
+        23,
+        40
+      ],
+      "accounts": [
+        {
+          "name": "signer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "database",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Database",
+      "discriminator": [
+        235,
+        53,
+        109,
+        35,
+        184,
+        30,
+        81,
+        213
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "AchievementNotMet",
+      "msg": "The user has not met the criteria for the achievement."
+    },
+    {
+      "code": 6001,
+      "name": "AlreadyMinted",
+      "msg": "The user has already minted this achievement."
+    },
+    {
+      "code": 6002,
+      "name": "NftCapExceeded",
+      "msg": "The maximum NFT cap for this achievement has been reached."
+    },
+    {
+      "code": 6003,
+      "name": "AchievementNotFound",
+      "msg": "Achievement not found."
+    }
+  ],
+  "types": [
+    {
+      "name": "AchievementData",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "wallets",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "WalletInfo"
+                }
+              }
+            }
+          },
+          {
+            "name": "current_count",
+            "type": "u64"
+          },
+          {
+            "name": "max_nft_cap",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Database",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "achievements_count",
+            "type": "u64"
+          },
+          {
+            "name": "achievements",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "AchievementData"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "WalletInfo",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "wallet_address",
+            "type": "string"
+          },
+          {
+            "name": "user_id",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}

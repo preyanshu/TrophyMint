@@ -1,0 +1,17 @@
+{
+    "name": "Follower Frenzy",
+    "symbol": "ACHV",
+    "description": "Awarded to those who achieved their first follower milestone in the Follower Frenzy! This token symbolizes your initiation into the world of social influence.",
+    "image": "https://res.cloudinary.com/dbo7hzofg/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1725465181/follower_achievment_xcmpep.jpg",
+    "attributes": [
+      {
+        "trait_type": "Achievement",
+        "value": "First Follower"
+      },
+      {
+        "trait_type": "Token",
+        "value": "ACHV"
+      }
+    ]
+  }
+  

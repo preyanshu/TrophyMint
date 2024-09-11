@@ -1,0 +1,13 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; connect-src 'self' https://api.dscvr.one https://api1.stg.dscvr.one https://*.helius-rpc.com https://api.devnet.solana.com https://lottie.host/62fbdc98-c33a-428f-bef1-2933c285b572/W18T6i5o8T.json https://*.lottiefiles.com; img-src 'self' https://*.dial.to/ https://proxy.dial.to https://res.cloudinary.com; script-src 'self' 'wasm-unsafe-eval' 'unsafe-inline' https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs https://unpkg.com/@dotlottie/player-component@2.7.12/dist/chunk-TRZ6EGBZ.mjs https://unpkg.com/@dotlottie/player-component@2.7.12/dist/chunk-ZWH2ESXT.mjs https://unpkg.com;"
+        }
+      ]
+    }
+  ]
+}
