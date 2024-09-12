@@ -11,7 +11,7 @@ We utilize the **Metaplex Core Standard** for minting NFTs, which offers signifi
 
 ### Demo Video
 
-[Click here to watch the demo video](https://link-to-your-demo-video.com)
+[Click here to watch the demo video](https://www.youtube.com/watch?v=uaWmvn0nZr4)
 
 ### Canvas Link
 
@@ -28,7 +28,7 @@ The following steps outline how TrophyMint functions :
 1. **Connect Wallet:**
    - Users begin by connecting their Solana-compatible wallet (e.g., Phantom) to the platform. This allows for secure interactions and NFT minting.
 
-![step2.png](https://cdn.dorahacks.io/static/files/191e22f83b007c98500899b40c19285d.png)
+![step_1_tm.png](https://cdn.dorahacks.io/static/files/191e6697186afbcac5302fa4b62a88dd.png)
 
 1. **Dashboard Access:**
    - Once connected, users are taken to their personalized dashboard. This dashboard displays:
@@ -44,7 +44,7 @@ The following steps outline how TrophyMint functions :
 1. **Mint Achievement NFTs:**
    - If a user has completed a specific achievement, they can click the **Mint NFT** button corresponding to that achievement. The platform verifies the completion and mints a rare NFT, which is added to the user’s profile.
 
-![step2.png](https://cdn.dorahacks.io/static/files/191e22f83b007c98500899b40c19285d.png)
+![step__2.png](https://cdn.dorahacks.io/static/files/191e66a06f6d2739d5e2360421689a8e.png)
 
 ## Behind the Scenes
 
@@ -96,16 +96,16 @@ Follow these instructions to set up the project locally. The setup includes both
    ```bash
    git clone https://github.com/preyanshu/TrophyMint
 
-2. **Navigate to the Frontend Directory:**
+1. **Navigate to the Frontend Directory:**
    ```bash
    cd frontend
 
-3. **Install Dependencies:**
+1. **Install Dependencies:**
    ```bash
 
    npm install
 
-4. **Run the Development Server:**
+1. **Run the Development Server:**
    ```bash
    npm run dev
 
@@ -113,26 +113,26 @@ Follow these instructions to set up the project locally. The setup includes both
 
 1. **Install Anchor CLI**
 
-2. **Navigate to the Backend Directory:**
+1. **Navigate to the Backend Directory:**
    ```bash
    cd backend
 
-3. **Configure Anchor for Devnet:**
+1. **Configure Anchor for Devnet:**
    ```bash
    anchor config set --provider.cluster devnet
 
-4. **Install Dependencies:**
+1. **Install Dependencies:**
    ```bash
    npm i
 
-5. **Build the smart contracts using Anchor:**
+1. **Build the smart contracts using Anchor:**
    ```bash
    anchor build
 
-6. **Deploy the contracts to Devnet:**
+1. **Deploy the contracts to Devnet:**
    ```bash
    anchor deploy
 
-7. **Test the contract:**
+1. **Test the contract:**
    ```bash
    anchor test --skip-build --skip-deploy
