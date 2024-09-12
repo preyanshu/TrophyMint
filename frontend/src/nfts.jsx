@@ -37,7 +37,7 @@ const nfts = [
         name: "Discovery Dynamo",
         codeName : "dscvr_points_1000000000",
         symbol: "ACHV",
-        description: "You've unlocked the Discovery Dynamo badge by hitting a whopping 1 billion DSCR points! This token celebrates your monumental achievement and relentless pursuit of points.",
+        description: "You've unlocked the Discovery Dynamo badge by hitting a whopping 1 Thousand DSCR points! This token celebrates your monumental achievement and relentless pursuit of points.",
         image: "https://res.cloudinary.com/dbo7hzofg/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1725465197/dscvrpoints_achievments_twtrxq.jpg",
         attributes: [
           {

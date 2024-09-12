@@ -13,13 +13,15 @@ import {
 } from "@coral-xyz/anchor";
 import { Buffer } from "buffer";
 import useCanvasWallet from "./CanvasWalletProvider";
+// import "dotenv/config";
+import {db} from "./config";
 
 window.Buffer = Buffer;
 import BN from 'bn.js';
 
 export const MintData1 = ({ setMintData }) => {
     
-    const { walletAddress, signTransaction } = useCanvasWallet();
+    const { walletAddress, signTransaction, isSuccess } = useCanvasWallet();
     const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
 
     function parseBN(data) {
@@ -43,7 +45,7 @@ export const MintData1 = ({ setMintData }) => {
             const program = new Program(idl, provider);
 
             const res = await program.account.database.fetch(
-                new PublicKey('5ahNFeoYAS4HayZWK6osa6ZiocNojNJcfzgUJASicRbf')
+                new PublicKey(db)
             );
              res.achievements.forEach(achievement => {
                 const currentCount = parseBN(achievement.currentCount);
@@ -67,7 +69,7 @@ export const MintData1 = ({ setMintData }) => {
         if (walletAddress) {
             init();
         }
-    }, [walletAddress]);
+    }, [walletAddress, isSuccess]);
 
     return <div></div>;
 };

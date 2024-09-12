@@ -7,6 +7,8 @@ import BN from "bn.js";
 import { PublicKey, clusterApiUrl, Connection, Keypair } from "@solana/web3.js";
 import { AnchorProvider, Program } from "@coral-xyz/anchor";
 import { toast } from "react-toastify";
+// import "dotenv/config";
+import { db } from "./config";
 
 const client = new GraphQLClient("https://api.dscvr.one/graphql");
 
@@ -87,14 +89,14 @@ export const NFTDisplay = ({ mintData }) => {
         signer: anchorProvider.wallet.publicKey,
         payer: anchorProvider.wallet.publicKey,
         asset: assetPublicKey,
-        database: new PublicKey("5ahNFeoYAS4HayZWK6osa6ZiocNojNJcfzgUJASicRbf"),
+        database: new PublicKey(db),
       };
 
       console.log(
         nftName,
         new BN(userData.followerCount),
         new BN(userData?.streak?.dayCount),
-        new BN(userData.dscvrPoints),
+        new BN(userData.dscvrPoints/1e6),
         username
       );
 
@@ -102,8 +104,9 @@ export const NFTDisplay = ({ mintData }) => {
         .createAsset(
           nftName,
           new BN(userData.followerCount),
+          new BN(userData.dscvrPoints/1e6),
           new BN(userData?.streak?.dayCount),
-          new BN(userData.dscvrPoints),
+        
           username
         )
         .accounts(accounts)
@@ -121,7 +124,7 @@ export const NFTDisplay = ({ mintData }) => {
       {nfts.map((nft, index) => {
         const achievement = mintData?.achievements[index];
         const isAlreadyMinted = achievement?.wallets.some(
-          (wallet) => wallet?.walletAddress === walletAddress
+          (wallet) => wallet?.walletAddress === walletAddress || wallet?.userId === userInfo.username
         );
 
         let mintCondition = null;
@@ -145,7 +148,7 @@ export const NFTDisplay = ({ mintData }) => {
           // Max cap not reached, apply the mint conditions for specific indexes
           if (index === 2) {
             // First NFT: Check if dscvrPoints >= 1,000,000
-            if (userData?.dscvrPoints >= 1000000000 && !isAlreadyMinted) {
+            if (userData?.dscvrPoints/1e6 >= 1000 && !isAlreadyMinted) {
               mintCondition = (
                 <button
                   className="text-sm w-full text-indigo-400"

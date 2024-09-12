@@ -1,5 +1,5 @@
 {
-  "address": "6HJ2RGDTB88UkzPBgCA8S7MBRjPeNeNsxNpxU1Qeow6t",
+  "address": "4NWCR5Ga4WJdBkZH9h3oSbhDwt4if2dXt87xH25jRnQn",
   "metadata": {
     "name": "anchor_example",
     "version": "0.1.0",
@@ -141,6 +141,11 @@
       "code": 6003,
       "name": "AchievementNotFound",
       "msg": "Achievement not found."
+    },
+    {
+      "code": 6004,
+      "name": "UserIdAlreadyExists",
+      "msg": "The user ID has already been used for this achievement."
     }
   ],
   "types": [

@@ -23,7 +23,7 @@ const WalletComponent = ({setWalletAddress}) => {
     <div className={`dark ${walletAddress ? "mt-3" : "mt-[-90px]"} flex justify-center flex-col`}>
       {!walletAddress &&
       <div className="w-full text-center">
-       <dotlottie-player src="https://lottie.host/62fbdc98-c33a-428f-bef1-2933c285b572/W18T6i5o8T.json" background="transparent" speed="3" style={{width: "250px", height: "250px"}} direction="1" playMode="normal" loop autoplay></dotlottie-player>
+       <dotlottie-player src="https://lottie.host/375e2e48-5819-4d6d-a691-6eada5678aae/ljUkjBwWMB.json" background="transparent" speed="3" style={{width: "250px", height: "250px"}} direction="1" playMode="normal" loop autoplay></dotlottie-player>
 
        <button className="text-sm text-center h-[50px] bg-indigo-400" onClick={connectWallet}>Connect Solana Wallet</button>
        </div>
