@@ -1,9 +1,9 @@
-import WalletComponent from './WalletComponent'
-import { CanvasWalletProvider } from './CanvasWalletProvider';
-import { MintedTokens } from './MintedTokens';
+import WalletComponent from './components/WalletComponent'
+import { CanvasWalletProvider } from './Provider/CanvasWalletProvider';
+import { MintedTokens } from './components/MintedTokens';
 import { useEffect, useState } from 'react';
-import NFTDisplay from './NftTokens';
-import { MintData1 } from './MintData';
+import NFTDisplay from './components/NftTokens';
+import { MintData1 } from './components/MintData';
 import { Bounce, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
