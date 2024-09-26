@@ -1,4 +1,5 @@
 # TrophyMint
+![image](https://github.com/user-attachments/assets/374611cc-0f4c-4837-be40-9ff6f9d5f398)
 
 ![_b033e4b3-8ecc-4a49-ac30-e07070c8a90b.jpg](https://cdn.dorahacks.io/static/files/191e2251fb2e2a4043420844c38ae456.jpg)
 
